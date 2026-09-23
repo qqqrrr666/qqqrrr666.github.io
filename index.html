@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>勇敢的小勇者 · 打怪升级小游戏</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    background: radial-gradient(circle at 50% 30%, #2b2340, #171232 70%);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; user-select: none;
+    font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+  }
+  #wrap { position: relative; line-height: 0; }
+  canvas {
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.55), 0 0 0 6px rgba(255,255,255,0.08);
+  }
+  #hint {
+    position: fixed; left: 50%; bottom: 10px; transform: translateX(-50%);
+    color: rgba(255,255,255,0.38); font-size: 13px; letter-spacing: 1px;
+    pointer-events: none; user-select: none;
+  }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="1280" height="720"></canvas>
+  </div>
+  <div id="hint">提示：WASD 移动 · 鼠标瞄准 · 按住左键蓄力松开释放冲击波 · Q/E/R/空格 使用技能</div>
+
+  <script src="js/engine.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
